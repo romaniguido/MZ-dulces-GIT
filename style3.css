@@ -1,0 +1,455 @@
+* {
+    margin:0px; 
+    padding: 0;
+}
+
+
+/* GENERAL APLICABLE A TODAS LAS PAGINAS  */
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #f3efed;
+}
+
+.subtitulo1 {
+    color:#000000;
+    font-size: 300%;
+    font-family: 'Mukta', sans-serif;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.textos {
+    color: #000000;
+    font-size: 130%;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas:
+    "barra"
+    "banner"
+    "cuerpo"
+    "footer"
+    ;
+}
+
+.menu {
+    font-size: 150%;
+    font-family: 'Bebas Neue', cursive;
+    border: 3px black solid;
+    list-style: none;
+    height: 90px;
+    background-color: #603322;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    grid-area: menu;
+    margin: 2% 1% 2% 1%;}
+
+#logo {
+    display: flex;
+    justify-content:  center;
+
+}
+
+#logo img {
+    background-color: #f3efed;
+    height: 300px ;
+    grid-area: logo;
+    margin-top: 20px;
+
+}
+
+.barra {
+    display: grid;
+    grid-template-areas:
+    "logo"
+    "menu"
+    ;
+}
+
+@media (min-width:1000px) {
+    .barra {
+        border: 4px black solid;
+        background-color: #603322;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas:
+        "menu logo" 
+        ;
+        margin: 0;
+
+    }
+
+    .menu {
+        border: none;
+    }
+    
+    #logo img {
+    background-color: #603322;
+    height: 100px ;
+    grid-area: logo;
+
+    }
+
+    #logo img:hover {
+        transform: scale(1.2,1.2);
+    }
+
+    .menu li:hover {
+        transform: scale(1.5,1.5);
+    }
+
+}    
+
+.menu li:hover {
+    transform: scale(1.2,1.2);
+    transition: 0.5s
+}
+
+#logo img:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.5s
+}
+
+.banner img {
+    width: 100%;
+    margin: 0 0% 2% 0%;
+}
+
+footer {
+    grid-area: footer;
+    background-color:#603322 ;
+    bottom: 0;
+    margin-top: auto;
+    display: grid;
+    grid-template-areas:
+    "botones"
+    "derechos"
+    ;
+
+}
+
+footer a:hover {
+    transform: scale(1.5,1.5);
+    transition: 0.5s
+}
+
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    font-size: 300%;
+    padding: 1%;
+    grid-area: botones;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+}
+
+#derechos {
+    color: white;
+    font-size: 150%;
+    padding: 1%;
+    text-align: right;
+    grid-area: derechos;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    padding: 1%;
+} 
+
+@media (min-width:1000px) {
+    footer {
+        height: 100px;
+        grid-area: footer;
+        background-color:#603322 ;
+        bottom: 0;
+        margin-top: auto;
+        display: grid;
+        grid-template-areas:
+        "botones derechos"
+        ;
+    
+} }
+
+.active {
+    background-color: #773e2a;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center; 
+    border-radius: 25%;   
+}
+
+/* Index */
+
+.cuerpouno{
+    display: grid;
+    grid-template-areas: 
+    "brazo1 "
+    "brazo2 "
+    "brazo3 "
+    "brazo4"
+    ;
+}
+
+.brazo1 {
+    display: grid;
+
+    grid-area: brazo1;
+}
+
+.brazo2 {
+    display: grid;
+
+    grid-area: brazo2;
+}
+
+
+
+.brazo3 {
+    display: grid;
+    margin-bottom: 1%;
+    grid-area: brazo3;
+    justify-content: center;
+    
+    
+}
+
+.brazo4 {
+    display: grid;
+    grid-area: brazo4;
+}
+
+@media (min-width:1000px) {
+    .cuerpouno{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "brazo1 brazo1"
+        "brazo2 brazo2"
+        "brazo3 brazo4"
+        ;
+    }
+    .brazo3 {
+        display: grid;
+        margin-bottom: 1%;
+        grid-area: brazo3;
+        margin-bottom: 10%;
+    }
+    .brazo4 {
+        display: grid;
+        grid-area: brazo4;
+        align-items: center;
+    }
+    }    
+
+/* Nosotros */
+
+#mapa {
+    display: grid;
+    grid-template-areas:
+       "uno "
+       "dos"
+       ;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.textito {
+    font-size: 150%;
+    text-align: justify;
+    padding: 1% 5% 5% 5%;
+}
+
+
+.padre img {
+    width: 50%;
+}
+
+
+@media (min-width:1000px) {
+    #mapa {
+        display: grid;
+        grid-template-areas:
+           "uno dos"
+           ;
+        margin-bottom: 5%;
+        text-align: center;
+        margin-left: 2%;
+    }
+    }
+/* Productos */
+
+.tercero {
+    color:#000000;
+    font-size: 150%;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.padre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "uno "
+    "dos "
+    "tres"
+    "cuatro "
+    "cinco"
+    "seis "
+    "siete"
+    " ocho"
+    "nueve"
+    "diez"
+    ;
+    row-gap: 10px;
+    justify-items: center;
+    margin-bottom: 10%;
+}
+
+#uno {
+    grid-area: uno;
+    display: grid;
+
+    justify-items: center;
+
+
+}
+#dos {
+    grid-area: dos;
+    display: grid;
+    justify-items: center;
+
+
+}
+#tres {
+    grid-area: tres;
+    display: grid;
+    justify-items: center;
+
+    
+}
+#cuatro {
+    grid-area: cuatro;
+    display: grid;
+    justify-items: center;
+
+}
+#cinco {
+    grid-area: cinco;
+    display: grid;
+    justify-items: center;
+
+}
+#seis {
+    grid-area: seis;
+    display: grid;
+    justify-items: center;
+
+}
+#siete {
+    grid-area: siete;
+    display: grid;
+    justify-items: center;
+
+}
+#ocho {
+    grid-area: ocho;
+    display: grid;
+    justify-items: center;
+
+}
+#nueve {
+    grid-area: nueve;
+    display: grid;
+    justify-items: center;
+
+}
+#diez {
+    grid-area: diez;
+    display: grid;
+    justify-items: center;
+
+}
+
+@media (min-width:1000px) {
+    .padre {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "uno uno"
+        "dos tres"
+        "cuatro cinco"
+        "seis seis"
+        "siete ocho"
+        "nueve diez"
+        ;
+        row-gap: 10px;
+        justify-items: center;
+        margin-bottom: 10%;
+        
+    }
+    }
+
+
+    /* correo y compra  */
+.formulario {
+    color: #000000;
+    text-align: left;
+    font-size: 150%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 5%;
+}
+
+.control {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 1%;
+    size: 10%;
+}
+
+
+
+
+
+/* animaciones */
+
+
+
+.brazo3 img:hover {
+animation: messi;
+
+
+}
+
+@keyframes messi {
+    0% {
+        transform: scale(1.3);
+        transform: translateY(100px);
+    }
+    25% {
+        transition: all 2s;
+    }
+    
+    75% {
+        border-radius: 20px;
+    }
+    
+    
+    }
